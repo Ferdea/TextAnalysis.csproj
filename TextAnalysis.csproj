@@ -51,8 +51,6 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="TextGenerator_Tests.cs" />
-    <Compile Include="FrequencyAnalysis_Tests.cs" />
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -60,7 +58,6 @@
     </Compile>
     <Compile Include="FrequencyAnalysisTask.cs" />
     <Compile Include="TextGeneratorTask.cs" />
-    <Compile Include="SentencesParser_Tests.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="SentencesParserTask.cs" />
   </ItemGroup>

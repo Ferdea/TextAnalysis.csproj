@@ -11,3 +11,17 @@ C:\Users\A.A.Sapegin\Downloads\TextAnalysis.csproj\obj\Debug\TextAnalysis.csproj
 C:\Users\A.A.Sapegin\Downloads\TextAnalysis.csproj\obj\Debug\TextAnalysis.csproj.CopyComplete
 C:\Users\A.A.Sapegin\Downloads\TextAnalysis.csproj\obj\Debug\TextAnalysis.exe
 C:\Users\A.A.Sapegin\Downloads\TextAnalysis.csproj\obj\Debug\TextAnalysis.pdb
+C:\Users\sapeg\RiderProjects\TextAnalysis.csproj\bin\Debug\HarryPotterText.txt
+C:\Users\sapeg\RiderProjects\TextAnalysis.csproj\bin\Debug\TextAnalysis.exe.config
+C:\Users\sapeg\RiderProjects\TextAnalysis.csproj\bin\Debug\TextAnalysis.exe
+C:\Users\sapeg\RiderProjects\TextAnalysis.csproj\bin\Debug\TextAnalysis.pdb
+C:\Users\sapeg\RiderProjects\TextAnalysis.csproj\bin\Debug\nunit.framework.dll
+C:\Users\sapeg\RiderProjects\TextAnalysis.csproj\bin\Debug\nunitlite.dll
+C:\Users\sapeg\RiderProjects\TextAnalysis.csproj\obj\Debug\TextAnalysis.csproj.AssemblyReference.cache
+C:\Users\sapeg\RiderProjects\TextAnalysis.csproj\obj\Debug\TextAnalysis.csproj.SuggestedBindingRedirects.cache
+C:\Users\sapeg\RiderProjects\TextAnalysis.csproj\obj\Debug\TextAnalysis.Properties.Resources.resources
+C:\Users\sapeg\RiderProjects\TextAnalysis.csproj\obj\Debug\TextAnalysis.csproj.GenerateResource.cache
+C:\Users\sapeg\RiderProjects\TextAnalysis.csproj\obj\Debug\TextAnalysis.csproj.CoreCompileInputs.cache
+C:\Users\sapeg\RiderProjects\TextAnalysis.csproj\obj\Debug\TextAnalysis.csproj.CopyComplete
+C:\Users\sapeg\RiderProjects\TextAnalysis.csproj\obj\Debug\TextAnalysis.exe
+C:\Users\sapeg\RiderProjects\TextAnalysis.csproj\obj\Debug\TextAnalysis.pdb

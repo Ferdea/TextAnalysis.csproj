@@ -14,7 +14,7 @@ namespace TextAnalysis
 
             foreach (var item in sentence)
             {
-                if (Char.IsLetter(item) || item == '\'')
+                if (char.IsLetter(item) || item == '\'')
                     word.Append(item);
                 else if (!string.IsNullOrEmpty(word.ToString()))
                 {
@@ -27,6 +27,7 @@ namespace TextAnalysis
             {
                 wordList.Add(word.ToString().ToLower());
             }
+            wordList.Add(".");
             
             return wordList;
         }

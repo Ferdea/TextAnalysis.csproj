@@ -46,6 +46,11 @@ namespace TextAnalysis
             var dataList = new List<(int, string)>();
             foreach (var item in data)
             {
+                if (item.Key == ".")
+                {
+                    dataList.Add((int.MinValue, "."));
+                    continue;
+                }
                 dataList.Add((int.MaxValue - item.Value, item.Key));
             }
 
@@ -72,10 +77,9 @@ namespace TextAnalysis
                 foreach (var word in sortedData)
                 {
                     frequentData[item].Add(word);
-                    if (frequentData[item].Count == 5)
+                    if (frequentData[item].Count == 10)
                         break;
                 }
-                frequentData[item].Add(".");
             }
 
             return frequentData;

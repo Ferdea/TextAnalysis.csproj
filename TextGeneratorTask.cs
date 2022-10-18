@@ -15,19 +15,26 @@ namespace TextAnalysis
             
             for (var i = 0; i < wordsCount; i++)
             {
-                var key = $"{result[result.Count - 2]} {result[result.Count - 1]}";
                 if (result.Count >= 2
-                    && nextWords.ContainsKey(key))
-                    result.Add(nextWords[key].ElementAt(random.Next(nextWords[key].Count)));
+                    && nextWords.ContainsKey($"{result[result.Count - 2]} {result[result.Count - 1]}"))
+                    result.Add(nextWords[$"{result[result.Count - 2]} {result[result.Count - 1]}"]
+                        .ElementAt(random.Next(
+                            nextWords[$"{result[result.Count - 2]} {result[result.Count - 1]}"].Count)));
                 else if (nextWords.ContainsKey(result[result.Count - 1]))
                     result.Add(nextWords[result[result.Count - 1]].ElementAt(random.Next(nextWords[result[result.Count - 1]].Count)));
                 else
                     break;
                 if (result.ElementAt(result.Count - 1) == ".")
+                {
+                    result.RemoveAt(result.Count - 1);
                     break;
+                }
             }
 
-            return String.Join(" ", result);
+            
+            var res = String.Join(" ", result);
+            res += ".";
+            return res;
         }
     }
 }
