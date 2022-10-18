@@ -1,0 +1,13 @@
+C:\Users\A.A.Sapegin\Downloads\TextAnalysis.csproj\bin\Debug\HarryPotterText.txt
+C:\Users\A.A.Sapegin\Downloads\TextAnalysis.csproj\bin\Debug\TextAnalysis.exe.config
+C:\Users\A.A.Sapegin\Downloads\TextAnalysis.csproj\bin\Debug\TextAnalysis.exe
+C:\Users\A.A.Sapegin\Downloads\TextAnalysis.csproj\bin\Debug\TextAnalysis.pdb
+C:\Users\A.A.Sapegin\Downloads\TextAnalysis.csproj\bin\Debug\nunit.framework.dll
+C:\Users\A.A.Sapegin\Downloads\TextAnalysis.csproj\bin\Debug\nunitlite.dll
+C:\Users\A.A.Sapegin\Downloads\TextAnalysis.csproj\obj\Debug\TextAnalysis.csprojAssemblyReference.cache
+C:\Users\A.A.Sapegin\Downloads\TextAnalysis.csproj\obj\Debug\TextAnalysis.Properties.Resources.resources
+C:\Users\A.A.Sapegin\Downloads\TextAnalysis.csproj\obj\Debug\TextAnalysis.csproj.GenerateResource.cache
+C:\Users\A.A.Sapegin\Downloads\TextAnalysis.csproj\obj\Debug\TextAnalysis.csproj.CoreCompileInputs.cache
+C:\Users\A.A.Sapegin\Downloads\TextAnalysis.csproj\obj\Debug\TextAnalysis.csproj.CopyComplete
+C:\Users\A.A.Sapegin\Downloads\TextAnalysis.csproj\obj\Debug\TextAnalysis.exe
+C:\Users\A.A.Sapegin\Downloads\TextAnalysis.csproj\obj\Debug\TextAnalysis.pdb
