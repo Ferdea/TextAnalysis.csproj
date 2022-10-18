@@ -10,31 +10,30 @@ namespace TextAnalysis
         public static string ContinuePhrase(Dictionary<string, List<string>> nextWords, string phraseBeginning,
             int wordsCount)
         {
-            var result = phraseBeginning.Split(' ').ToList();
+            var sentence = phraseBeginning.Split(' ').ToList();
             var random = new Random();
+            string key;
             
             for (var i = 0; i < wordsCount; i++)
             {
-                if (result.Count >= 2
-                    && nextWords.ContainsKey($"{result[result.Count - 2]} {result[result.Count - 1]}"))
-                    result.Add(nextWords[$"{result[result.Count - 2]} {result[result.Count - 1]}"]
-                        .ElementAt(random.Next(
-                            nextWords[$"{result[result.Count - 2]} {result[result.Count - 1]}"].Count)));
-                else if (nextWords.ContainsKey(result[result.Count - 1]))
-                    result.Add(nextWords[result[result.Count - 1]].ElementAt(random.Next(nextWords[result[result.Count - 1]].Count)));
+                if (sentence.Count >= 2 &&
+                    nextWords.ContainsKey(key = $"{sentence[sentence.Count - 2]} {sentence[sentence.Count - 1]}"))
+                    sentence.Add(nextWords[key][random.Next(nextWords[key].Count)]);
+                else if (nextWords.ContainsKey(key = sentence[sentence.Count - 1]))
+                    sentence.Add(nextWords[key][random.Next(nextWords[key].Count)]);
                 else
                     break;
-                if (result.ElementAt(result.Count - 1) == ".")
+                
+                if (sentence[sentence.Count - 1] == ".")
                 {
-                    result.RemoveAt(result.Count - 1);
+                    sentence.RemoveAt(sentence.Count - 1);
                     break;
                 }
             }
 
-            
-            var res = String.Join(" ", result);
-            res += ".";
-            return res;
+            var result = String.Join(" ", sentence);
+            result += ".";
+            return result;
         }
     }
 }

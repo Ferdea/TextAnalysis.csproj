@@ -1,5 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using System.Text;
 
 namespace TextAnalysis
@@ -16,14 +15,14 @@ namespace TextAnalysis
             {
                 if (char.IsLetter(item) || item == '\'')
                     word.Append(item);
-                else if (!string.IsNullOrEmpty(word.ToString()))
+                else if (word.Length != 0)
                 {
                     wordList.Add(word.ToString().ToLower());
                     word.Clear();
                 }
             }
 
-            if (!string.IsNullOrEmpty(word.ToString()))
+            if (word.Length != 0)
             {
                 wordList.Add(word.ToString().ToLower());
             }

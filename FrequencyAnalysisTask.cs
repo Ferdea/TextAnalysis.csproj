@@ -1,41 +1,43 @@
-﻿using System;
+﻿
 using System.Collections.Generic;
-using System.Linq;
 using System.Text;
 
 namespace TextAnalysis
 {
     static class FrequencyAnalysisTask
     {
-        private static Dictionary<string, Dictionary<string, int>> GetData(List<List<string>> text)
+        private static void GetNGrams(List<string> sentence, int n, Dictionary<string, Dictionary<string, int>> data)
+        {
+            for (var j = 0; j < sentence.Count - n + 1; j++)
+            {
+                var gram = new StringBuilder();
+                gram.Append(sentence[j]);
+                for (var k = 1; k < n - 1; k++)
+                {
+                    gram.Append(' ');
+                    gram.Append(sentence[j + k]);
+                }
+
+                if (data.ContainsKey(gram.ToString()))
+                {
+                    if (data[gram.ToString()].ContainsKey(sentence[j + n - 1]))
+                        data[gram.ToString()][sentence[j + n - 1]]++;
+                    else
+                        data[gram.ToString()][sentence[j + n - 1]] = 1;
+                }
+                else
+                    data[gram.ToString()] = new Dictionary<string, int>{{sentence[n + j - 1], 1}};
+            }
+        }
+
+        private static Dictionary<string, Dictionary<string, int>> GetFrequencyStatictic(List<List<string>> text)
         {
             var data = new Dictionary<string, Dictionary<string, int>>();
             
             foreach (var item in text)
             {
-                for (var i = 2; i <= 3; i++)
-                {
-                    for (var j = 0; j < item.Count - i + 1; j++)
-                    {
-                        var gramm = new StringBuilder();
-                        gramm.Append(item[j]);
-                        for (var k = 1; k < i - 1; k++)
-                        {
-                            gramm.Append(' ');
-                            gramm.Append(item[j + k]);
-                        }
-
-                        if (data.ContainsKey(gramm.ToString()))
-                        {
-                            if (data[gramm.ToString()].ContainsKey(item[j + i - 1]))
-                                data[gramm.ToString()][item[j + i - 1]]++;
-                            else
-                                data[gramm.ToString()][item[j + i - 1]] = 1;
-                        }
-                        else
-                            data[gramm.ToString()] = new Dictionary<string, int>{{item[i + j - 1], 1}};
-                    }
-                }
+                GetNGrams(item, 2, data);
+                GetNGrams(item, 3, data);
             }
 
             return data;
@@ -87,7 +89,7 @@ namespace TextAnalysis
         
         public static Dictionary<string, List<string>> GetMostFrequentNextWords(List<List<string>> text)
         {
-            return GetFrequentData(GetData(text));
+            return GetFrequentData(GetFrequencyStatictic(text));
         }
     }
 }
